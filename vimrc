@@ -1,5 +1,14 @@
 call pathogen#infect()
 
+"""" toggle quickfix window
+:noremap <space> :call asyncrun#quickfix_toggle(8)<cr>
+
+
+"""" automatically open quickfix when Async runs
+augroup vimrc
+    autocmd User AsyncRunStart call asyncrun#quickfix_toggle(8, 1)
+augroup END
+
 
 """" necessary for paredit.vim
 syntax on
