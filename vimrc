@@ -1,13 +1,15 @@
 call pathogen#infect()
 
+
+
 """" toggle quickfix window
 :noremap <space> :call asyncrun#quickfix_toggle(8)<cr>
-
 
 """" automatically open quickfix when Async runs
 augroup vimrc
     autocmd User AsyncRunStart call asyncrun#quickfix_toggle(8, 1)
 augroup END
+
 
 
 """" necessary for paredit.vim
@@ -19,6 +21,8 @@ filetype indent on
 """" keep parens from going to next line
 let g:paredit_electric_return=0
 
+
+
 """" necessary for rainbow-parenthesis
 "autocmd BufNewFile,BufRead *.py RainbowParenthesesToggle
 "autocmd BufNewFile,BufRead *.py RainbowParenthesesLoadRound
@@ -29,11 +33,11 @@ let g:paredit_electric_return=0
 "autocmd BufNewFile,BufRead *.clj RainbowParenthesesLoadSquare
 "autocmd BufNewFile,BufRead *.clj RainbowParenthesesLoadBraces
 
-
 au VimEnter * RainbowParenthesesToggle
 au Syntax * RainbowParenthesesLoadRound
 au Syntax * RainbowParenthesesLoadSquare
 au Syntax * RainbowParenthesesLoadBraces
+
 
 
 set expandtab
