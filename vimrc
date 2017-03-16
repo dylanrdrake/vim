@@ -5,6 +5,8 @@ call pathogen#infect()
 """" toggle quickfix window
 :noremap <space> :call asyncrun#quickfix_toggle(8)<cr>
 
+
+
 """" automatically open quickfix when Async runs
 augroup vimrc
     autocmd User AsyncRunStart call asyncrun#quickfix_toggle(8, 1)
@@ -40,6 +42,7 @@ au Syntax * RainbowParenthesesLoadBraces
 
 
 
+"""" Tabs and Spaces
 set expandtab
 set shiftround
 autocmd BufNewFile,BufRead *.py set shiftwidth=4
@@ -51,10 +54,13 @@ autocmd BufNewFile,BufRead *.clj set softtabstop=2
 autocmd BufNewFile,BufRead *.html set shiftwidth=2
 autocmd BufNewFile,BufRead *.html set tabstop=2
 autocmd BufNewFile,BufRead *.html set softtabstop=2
+autocmd BufNewFile,BufRead *.sol set shiftwidth=4
+autocmd BufNewFile,BufRead *.sol set tabstop=4
+autocmd BufNewFile,BufRead *.sol set softtabstop=4
 
 
 
-
+"""" Formatting
 set wildmenu
 
 """" line numbers
@@ -67,12 +73,17 @@ set wildmenu
 
 set nowrap
 
+
+
+"""" Colors
 set t_Co=256
 set background=dark
 
 autocmd BufNewFile,BufRead *.py colorscheme PaperColor
 autocmd BufNewFile,BufRead *.clj colorscheme molokai
 autocmd BufNewFile,BufRead *.html colorscheme PaperColor
+autocmd BufNewFile,BufRead *.sol colorscheme molokai
+
 
 "set laststatus=2
 "if version >= 700
