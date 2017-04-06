@@ -54,6 +54,9 @@ autocmd BufNewFile,BufRead *.clj set softtabstop=2
 autocmd BufNewFile,BufRead *.html set shiftwidth=2
 autocmd BufNewFile,BufRead *.html set tabstop=2
 autocmd BufNewFile,BufRead *.html set softtabstop=2
+autocmd BufNewFile,BufRead *.js set shiftwidth=2
+autocmd BufNewFile,BufRead *.js set tabstop=2
+autocmd BufNewFile,BufRead *.js set softtabstop=2
 autocmd BufNewFile,BufRead *.sol set shiftwidth=4
 autocmd BufNewFile,BufRead *.sol set tabstop=4
 autocmd BufNewFile,BufRead *.sol set softtabstop=4
@@ -82,6 +85,7 @@ set background=dark
 autocmd BufNewFile,BufRead *.py colorscheme PaperColor
 autocmd BufNewFile,BufRead *.clj colorscheme molokai
 autocmd BufNewFile,BufRead *.html colorscheme PaperColor
+autocmd BufNewFile,BufRead *.js colorscheme PaperColor
 autocmd BufNewFile,BufRead *.sol colorscheme molokai
 
 
