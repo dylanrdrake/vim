@@ -35,7 +35,7 @@ let g:paredit_electric_return=0
 "autocmd BufNewFile,BufRead *.clj RainbowParenthesesLoadSquare
 "autocmd BufNewFile,BufRead *.clj RainbowParenthesesLoadBraces
 
-au VimEnter * RainbowParenthesesToggle
+"au VimEnter * RainbowParenthesesToggle
 au Syntax * RainbowParenthesesLoadRound
 au Syntax * RainbowParenthesesLoadSquare
 au Syntax * RainbowParenthesesLoadBraces
@@ -54,6 +54,9 @@ autocmd BufNewFile,BufRead *.clj set softtabstop=2
 autocmd BufNewFile,BufRead *.html set shiftwidth=2
 autocmd BufNewFile,BufRead *.html set tabstop=2
 autocmd BufNewFile,BufRead *.html set softtabstop=2
+autocmd BufNewFile,BufRead *.css set shiftwidth=2
+autocmd BufNewFile,BufRead *.css set tabstop=2
+autocmd BufNewFile,BufRead *.css set softtabstop=2
 autocmd BufNewFile,BufRead *.js set shiftwidth=2
 autocmd BufNewFile,BufRead *.js set tabstop=2
 autocmd BufNewFile,BufRead *.js set softtabstop=2
@@ -74,7 +77,8 @@ set wildmenu
 ":au WinEnter * :setlocal number
 ":au WinLeave * :setlocal nonumber
 
-set nowrap
+"""" Line wrapping
+"set nowrap
 
 
 
@@ -85,6 +89,7 @@ set background=dark
 autocmd BufNewFile,BufRead *.py colorscheme PaperColor
 autocmd BufNewFile,BufRead *.clj colorscheme molokai
 autocmd BufNewFile,BufRead *.html colorscheme PaperColor
+autocmd BufNewFile,BufRead *.css colorscheme PaperColor
 autocmd BufNewFile,BufRead *.js colorscheme PaperColor
 autocmd BufNewFile,BufRead *.sol colorscheme molokai
 
