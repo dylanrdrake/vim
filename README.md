@@ -17,7 +17,7 @@ My personal vim setup.
 
 
 ## Plugins
-- AsyncRun for running terminal commands.
+- AsyncRun for running terminal commands. Outputs to quickfix. vimrc remaps open Quickfix toggle to spacebar.
 - Paredit for easy expression editing in Clojure
 - Fireplace for Clojure REPL
 - RainbowParenthesis to make it easier to read lisp expressions.
