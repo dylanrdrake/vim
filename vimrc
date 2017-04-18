@@ -35,10 +35,13 @@ let g:paredit_electric_return=0
 "autocmd BufNewFile,BufRead *.clj RainbowParenthesesLoadSquare
 "autocmd BufNewFile,BufRead *.clj RainbowParenthesesLoadBraces
 
-"au VimEnter * RainbowParenthesesToggle
+
+
+au VimEnter * RainbowParenthesesActivate
 au Syntax * RainbowParenthesesLoadRound
 au Syntax * RainbowParenthesesLoadSquare
 au Syntax * RainbowParenthesesLoadBraces
+
 
 
 
@@ -63,6 +66,10 @@ autocmd BufNewFile,BufRead *.js set softtabstop=2
 autocmd BufNewFile,BufRead *.sol set shiftwidth=4
 autocmd BufNewFile,BufRead *.sol set tabstop=4
 autocmd BufNewFile,BufRead *.sol set softtabstop=4
+autocmd BufNewFile,BufRead *.c set shiftwidth=4
+autocmd BufNewFile,BufRead *.c set tabstop=4
+autocmd BufNewFile,BufRead *.c set softtabstop=4
+
 
 
 
@@ -92,6 +99,7 @@ autocmd BufNewFile,BufRead *.html colorscheme PaperColor
 autocmd BufNewFile,BufRead *.css colorscheme PaperColor
 autocmd BufNewFile,BufRead *.js colorscheme PaperColor
 autocmd BufNewFile,BufRead *.sol colorscheme molokai
+autocmd BufNewFile,BufRead *.c colorscheme molokai
 
 
 "set laststatus=2
