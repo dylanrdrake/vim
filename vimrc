@@ -1,6 +1,9 @@
 call pathogen#infect()
 
 
+"""" switch kj to escape without moving back one space 
+:inoremap kj <Esc>`^
+
 
 """" toggle quickfix window
 :noremap <space> :call asyncrun#quickfix_toggle(8)<cr>
@@ -101,6 +104,7 @@ set wildmenu
 set t_Co=256
 set background=dark
 
+colorscheme PaperColor
 autocmd BufNewFile,BufRead *.py colorscheme PaperColor
 autocmd BufNewFile,BufRead *.clj colorscheme molokai
 autocmd BufNewFile,BufRead *.html colorscheme PaperColor
