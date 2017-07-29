@@ -69,6 +69,14 @@ autocmd BufNewFile,BufRead *.sol set softtabstop=4
 autocmd BufNewFile,BufRead *.c set shiftwidth=4
 autocmd BufNewFile,BufRead *.c set tabstop=4
 autocmd BufNewFile,BufRead *.c set softtabstop=4
+autocmd BufNewFile,BufRead *.cpp set shiftwidth=4
+autocmd BufNewFile,BufRead *.cpp set tabstop=4
+autocmd BufNewFile,BufRead *.cpp set softtabstop=4
+autocmd BufNewFile,BufRead *.asm set shiftwidth=4
+autocmd BufNewFile,BufRead *.asm set tabstop=4
+autocmd BufNewFile,BufRead *.asm set softtabstop=4
+
+
 
 
 
@@ -100,10 +108,12 @@ autocmd BufNewFile,BufRead *.css colorscheme PaperColor
 autocmd BufNewFile,BufRead *.js colorscheme PaperColor
 autocmd BufNewFile,BufRead *.sol colorscheme molokai
 autocmd BufNewFile,BufRead *.c colorscheme molokai
+autocmd BufNewFile,BufRead *.asm colorscheme PaperColor
+autocmd BufNewFile,BufRead *.cpp colorscheme PaperColor
 
 
-"set laststatus=2
-"if version >= 700
-"    au InsertEnter * highlight StatusLine ctermfg=203 ctermbg=236
-"    au InsertLeave * highlight StatusLine ctermfg=118 ctermbg=236
-"endif
+set laststatus=2
+if version >= 700
+    au InsertEnter * highlight StatusLine ctermfg=203 ctermbg=236
+    au InsertLeave * highlight StatusLine ctermfg=118 ctermbg=236
+endif
