@@ -29,21 +29,11 @@ let g:paredit_electric_return=0
 
 
 """" necessary for rainbow-parenthesis
-"autocmd BufNewFile,BufRead *.py RainbowParenthesesToggle
-"autocmd BufNewFile,BufRead *.py RainbowParenthesesLoadRound
-"autocmd BufNewFile,BufRead *.py RainbowParenthesesLoadSquare
-"autocmd BufNewFile,BufRead *.py RainbowParenthesesLoadBraces
-"autocmd BufNewFile,BufRead *.clj RainbowParenthesesToggle
-"autocmd BufNewFile,BufRead *.clj RainbowParenthesesLoadRound
-"autocmd BufNewFile,BufRead *.clj RainbowParenthesesLoadSquare
-"autocmd BufNewFile,BufRead *.clj RainbowParenthesesLoadBraces
-
-
-
-au VimEnter * RainbowParenthesesActivate
+au BufEnter * RainbowParenthesesActivate
 au Syntax * RainbowParenthesesLoadRound
 au Syntax * RainbowParenthesesLoadSquare
 au Syntax * RainbowParenthesesLoadBraces
+au Syntax * RainbowParenthesesLoadChevrons
 
 
 
