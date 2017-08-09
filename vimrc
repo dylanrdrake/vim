@@ -2,7 +2,7 @@ call pathogen#infect()
 
 
 """" switch kj to escape without moving back one space 
-:inoremap kj <Esc>`^
+":inoremap kj <Esc>`^
 
 
 """" toggle quickfix window
@@ -22,7 +22,6 @@ syntax on
 filetype on
 filetype plugin on
 filetype indent on
-
 """" keep parens from going to next line
 let g:paredit_electric_return=0
 
@@ -33,8 +32,6 @@ au BufEnter * RainbowParenthesesActivate
 au Syntax * RainbowParenthesesLoadRound
 au Syntax * RainbowParenthesesLoadSquare
 au Syntax * RainbowParenthesesLoadBraces
-au Syntax * RainbowParenthesesLoadChevrons
-
 
 
 
