@@ -1,5 +1,4 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =3
-let g:netrw_dirhist_1='/home/dylan/code/Python'
-let g:netrw_dirhist_2='/home/dylan/code/Python/ez-menu'
-let g:netrw_dirhist_3='/home/dylan/code/Python/ez-menu/frontend'
+let g:netrw_dirhist_cnt =2
+let g:netrw_dirhist_1='/home/dylan/code'
+let g:netrw_dirhist_2='/home/dylan'

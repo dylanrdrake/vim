@@ -65,6 +65,7 @@ autocmd BufNewFile,BufRead *.cpp set softtabstop=4
 autocmd BufNewFile,BufRead *.asm set shiftwidth=4
 autocmd BufNewFile,BufRead *.asm set tabstop=4
 autocmd BufNewFile,BufRead *.asm set softtabstop=4
+autocmd BufNewFile,BufRead *.asm set filetype=nasm
 
 
 

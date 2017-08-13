@@ -241,8 +241,8 @@ let s:is_dark=(&background == 'dark')
 if s:is_dark " DARK VARIANT
   " These color names are corresponding to the original light version,
   " and they don't represent the HEX code that they store in this block.
-  let s:red     = ['#5faf5f', '71'] "Include/Exception
-  let s:green   = ['#dfaf00', '112'] "Special
+  let s:red     = ['#e44f2f', '196'] "Include/Exception
+  let s:green   = ['#5faf5f', '71'] "Special
   let s:blue    = ['#00afaf', '32'] "Keyword/Boolean
 
   let s:pink    = ['#afdf00', '211'] "Type
@@ -653,16 +653,17 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
   call s:HL("yaccVar", s:aqua, "", "")
 
   " NASM highlighting
-  call s:HL("nasmStdInstruction", s:navy, "", "")
-  call s:HL("nasmGen08Register", s:aqua, "", "")
-  call s:HL("nasmGen16Register", s:aqua, "", "")
-  call s:HL("nasmGen32Register", s:aqua, "", "")
-  call s:HL("nasmGen64Register", s:aqua, "", "")
-  call s:HL("nasmHexNumber", s:purple, "", "")
-  call s:HL("nasmStorage", s:aqua, "", "bold")
-  call s:HL("nasmLabel", s:pink, "", "")
-  call s:HL("nasmDirective", s:blue, "", "bold")
-  call s:HL("nasmLocalLabel", s:orange, "", "")
+  call s:HL("nasmStdInstruction", s:foreground, "", "")
+  call s:HL("nasmGen08Register", s:green, "", "")
+  call s:HL("nasmGen16Register", s:green, "", "")
+  call s:HL("nasmGen32Register", s:green, "", "")
+  call s:HL("nasmGen64Register", s:green, "", "")
+  call s:HL("nasmHexNumber", s:pink, "", "")
+  call s:HL("nasmStorage", s:aqua, "", "")
+  call s:HL("nasmLabel", s:blue, "", "")
+  call s:HL("nasmDirective", s:foreground, "", "bold")
+  call s:HL("nasmLocalLabel", s:aqua, "", "")
+  call s:HL("nasmInclude", s:purple, "", "bold")
 
   " GAS highlighting
   call s:HL("gasSymbol", s:pink, "", "")
@@ -769,9 +770,9 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
 
   " Python Highlighting
   call s:HL("pythonImport", s:purple, "", "bold")
-  call s:HL("pythonExceptions", s:red, "", "")
+  call s:HL("pythonExceptions", s:green, "", "")
   call s:HL("pythonException", s:purple, "", "bold")
-  call s:HL("pythonInclude", s:red, "", "")
+  call s:HL("pythonInclude", s:green, "", "")
   call s:HL("pythonStatement", s:wine, "", "")
   call s:HL("pythonConditional", s:purple, "", "bold")
   call s:HL("pythonRepeat", s:purple, "", "bold")
@@ -788,7 +789,7 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
   call s:HL("pythonStrFormatting", s:olive, "", "bold")
 
   call s:HL("pythonBoolean", s:aqua, "", "bold")
-  call s:HL("pythonExClass", s:red, "", "")
+  call s:HL("pythonExClass", s:green, "", "")
   call s:HL("pythonBytesEscape", s:olive, "", "bold")
   call s:HL("pythonDottedName", s:purple, "", "")
   call s:HL("pythonStrFormat", s:foreground, "", "")
@@ -847,7 +848,7 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
   call s:HL("jsonCommentError", s:pink, s:background , "")
 
   " Go Highlighting
-  call s:HL("goDirective", s:red, "", "")
+  call s:HL("goDirective", s:green, "", "")
   call s:HL("goDeclaration", s:blue, "", "bold")
   call s:HL("goStatement", s:pink, "", "")
   call s:HL("goConditional", s:purple, "", "bold")
@@ -1176,13 +1177,13 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
   " }}}
 
   " Plugin: Netrw
-  call s:HL("netrwVersion", s:red, "", "")
-  call s:HL("netrwList", s:pink, "", "")
+  call s:HL("netrwVersion", s:foreground, "", "")
+  call s:HL("netrwList", s:foreground, "", "")
   call s:HL("netrwHidePat", s:olive, "", "")
   call s:HL("netrwQuickHelp", s:blue, "", "")
   call s:HL("netrwHelpCmd", s:blue, "", "")
-  call s:HL("netrwDir", s:aqua, "", "bold")
-  call s:HL("netrwClassify", s:pink, "", "")
+  call s:HL("netrwDir", s:olive, "", "bold")
+  call s:HL("netrwClassify", s:foreground, "", "")
   call s:HL("netrwExe", s:green, "", "")
   call s:HL("netrwSuffixes", s:comment, "", "")
   call s:HL("netrwTreeBar", s:linenumber, "", "")
