@@ -1,6 +1,17 @@
 call pathogen#infect()
 
 
+"""" show syntax group of item under cursor
+function! SyntaxItem()
+  return synIDattr(synID(line("."),col("."),1),"name")
+endfunction
+
+set statusline+=%f\|
+set statusline+=%{SyntaxItem()}
+set statusline+=%=
+set statusline+=%-7.(%l,%c%V%)\ %<%P
+
+
 """" switch kj to escape without moving back one space 
 ":inoremap kj <Esc>`^
 

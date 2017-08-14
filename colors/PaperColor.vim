@@ -242,16 +242,18 @@ if s:is_dark " DARK VARIANT
   " These color names are corresponding to the original light version,
   " and they don't represent the HEX code that they store in this block.
   let s:red     = ['#e44f2f', '196'] "Include/Exception
-  let s:green   = ['#5faf5f', '71'] "Special
-  let s:blue    = ['#00afaf', '32'] "Keyword/Boolean
+  let s:green   = ['#5faf5f', '71']  "Special
+  let s:blue    = ['#00afaf', '32']  "Keyword/Boolean
 
   let s:pink    = ['#afdf00', '211'] "Type
   let s:olive   = ['#dfaf5f', '179'] "String
   let s:navy    = ['#df875f', '018'] "StorageClass
 
-  let s:orange  = ['#ff5faf', '209'] "Number
+  let s:orange  = ['#ff5faf', '173'] "Number
   let s:purple  = ['#af87af', '133'] "Repeat/Conditional
-  let s:aqua    = ['#5fafdf', '74'] "Operator/Delimiter
+  let s:aqua    = ['#5fafdf', '74']  "Operator/Delimiter
+
+  let s:gray    = ['#e4e4e4', '245'] 
 
   let s:wine  = ['#af8787', '138']
 
@@ -460,8 +462,7 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
 
   call s:HL("StatusLine", s:statusline_active_fg, s:statusline_active_bg, "bold")
   call s:HL("StatusLineNC", s:statusline_inactive_fg, s:statusline_inactive_bg, "None")
-  call s:HL("VertSplit", s:divider, s:background, "none")
-  call s:HL("VertSplit", s:red, s:background, "none")
+  call s:HL("VertSplit", s:statusline_inactive_bg, s:statusline_inactive_bg, "none")
   call s:HL("Visual", s:visual_fg, s:visual_bg, "")
   call s:HL("Directory", s:blue, "", "")
   call s:HL("ModeMsg", s:olive, "", "")
@@ -545,7 +546,7 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
   call s:HL("vimFuncName", s:purple, "", "")
   call s:HL("vimIsCommand", s:foreground, "", "")
   call s:HL("vimFuncVar", s:aqua, "", "")
-  call s:HL("vimLet", s:red, "", "")
+  call s:HL("vimLet", s:green, "", "")
   call s:HL("vimMapRhsExtend", s:foreground, "", "")
   call s:HL("vimCommentTitle", s:comment, "", "bold")
   call s:HL("vimBracket", s:aqua, "", "")
@@ -568,7 +569,7 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
   " Makefile Highlighting
   call s:HL("makeIdent", s:blue, "", "")
   call s:HL("makeSpecTarget", s:olive, "", "")
-  call s:HL("makeTarget", s:red, "", "")
+  call s:HL("makeTarget", s:green, "", "")
   call s:HL("makeStatement", s:aqua, "", "bold")
   call s:HL("makeCommands", s:foreground, "", "")
   call s:HL("makeSpecial", s:orange, "", "bold")
@@ -579,52 +580,20 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
   call s:HL("cmakeVariableValue", s:blue, "", "")
   call s:HL("cmakeOperators", s:red, "", "")
 
-  " C Highlighting
-  call s:HL("cType", s:pink, "", "bold")
-  call s:HL("cFormat", s:olive, "", "")
-  call s:HL("cStorageClass", s:navy, "", "bold")
-
-  call s:HL("cBoolean", s:green, "", "")
-  call s:HL("cCharacter", s:olive, "", "")
-  call s:HL("cConstant", s:green, "", "bold")
-  call s:HL("cConditional", s:purple, "", "bold")
-  call s:HL("cSpecial", s:olive, "", "bold")
-  call s:HL("cDefine", s:blue, "", "")
-  call s:HL("cNumber", s:orange, "", "")
-  call s:HL("cPreCondit", s:aqua, "", "")
-  call s:HL("cRepeat", s:purple, "", "bold")
-  call s:HL("cLabel",s:aqua, "", "")
-  " call s:HL("cAnsiFunction",s:aqua, "", "bold")
-  " call s:HL("cAnsiName",s:pink, "", "")
-  call s:HL("cDelimiter",s:blue, "", "")
-  " call s:HL("cBraces",s:foreground, "", "")
-  " call s:HL("cIdentifier",s:blue, s:pink, "")
-  " call s:HL("cSemiColon","", s:blue, "")
-  call s:HL("cOperator",s:aqua, "", "")
-  " call s:HL("cStatement",s:pink, "", "")
-  call s:HL("cFunction", s:foreground, "", "")
-  " call s:HL("cTodo", s:comment, "", "bold")
-  " call s:HL("cStructure", s:blue, "", "bold")
-  call s:HL("cCustomParen", s:foreground, "", "")
-  " call s:HL("cCustomFunc", s:foreground, "", "")
-  " call s:HL("cUserFunction",s:blue, "", "bold")
-  call s:HL("cOctalZero", s:purple, "", "bold")
-
-  " CPP highlighting
-  call s:HL("cppBoolean", s:navy, "", "")
-  call s:HL("cppSTLnamespace", s:purple, "", "")
+  " C and CPP highlighting
+  call s:HL("cInclude", s:foreground, "", "")
+  call s:HL("cIncluded", s:gray, "", "")
+  call s:HL("cType", s:gray, "", "bold")
+  call s:HL("cAnsiFunction", s:blue, "", "bold")
+  call s:HL("cppSTLnamespace", s:gray, "", "")
+  call s:HL("cppSTLtype", s:gray, "", "bold")
+  call s:HL("cConditional", s:purple, "", "")
+  call s:HL("cNumber", s:aqua, "", "")
+  call s:HL("cCppString", s:olive, "", "")
+  call s:HL("cStatement", s:blue, "", "")
   call s:HL("cppSTLconstant", s:foreground, "", "")
-  call s:HL("cppSTLtype", s:foreground, "", "")
-  call s:HL("cppSTLexception", s:pink, "", "")
-  call s:HL("cppSTLfunctional", s:foreground, "", "bold")
-  call s:HL("cppSTLiterator", s:foreground, "", "bold")
-  " call s:HL("cppSTLfunction", s:aqua, "", "bold")
-  call s:HL("cppExceptions", s:red, "", "")
-  call s:HL("cppStatement", s:blue, "", "")
-  call s:HL("cppStorageClass", s:navy, "", "bold")
-  call s:HL("cppAccess",s:blue, "", "")
-  " call s:HL("cppSTL",s:blue, "", "")
-
+  call s:HL("cppSTLfunction", s:blue, "", "")
+  call s:HL("cRepeat", s:purple, "", "")
 
   " Lex highlighting
   call s:HL("lexCFunctions", s:foreground, "", "")
@@ -658,12 +627,13 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
   call s:HL("nasmGen16Register", s:green, "", "")
   call s:HL("nasmGen32Register", s:green, "", "")
   call s:HL("nasmGen64Register", s:green, "", "")
-  call s:HL("nasmHexNumber", s:pink, "", "")
+  call s:HL("nasmHexNumber", s:purple, "", "")
   call s:HL("nasmStorage", s:aqua, "", "")
-  call s:HL("nasmLabel", s:blue, "", "")
+  call s:HL("nasmLabel", s:blue, "", "bold")
   call s:HL("nasmDirective", s:foreground, "", "bold")
   call s:HL("nasmLocalLabel", s:aqua, "", "")
-  call s:HL("nasmInclude", s:purple, "", "bold")
+  call s:HL("nasmInclude", s:foreground, "", "bold")
+  call s:HL("nasmDecNumber", s:orange, "", "")
 
   " GAS highlighting
   call s:HL("gasSymbol", s:pink, "", "")
@@ -777,7 +747,7 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
   call s:HL("pythonConditional", s:purple, "", "bold")
   call s:HL("pythonRepeat", s:purple, "", "bold")
   call s:HL("pythonFunction", s:blue, "", "bold")
-  call s:HL("pythonDefClass", s:orange, "", "bold")
+  call s:HL("pythonDefClass", s:aqua, "", "bold")
   call s:HL("pythonPreCondit", s:purple, "", "")
   call s:HL("pythonExClass", s:orange, "", "")
   call s:HL("pythonOperator", s:purple, "", "bold")
