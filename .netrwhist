@@ -1,4 +1,8 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =2
-let g:netrw_dirhist_1='/home/dylan/code/c++_for_programmers'
-let g:netrw_dirhist_2='/home/dylan/code/c++_for_programmers/l1'
+let g:netrw_dirhist_cnt =6
+let g:netrw_dirhist_1='/home/dylan/.vim/colors'
+let g:netrw_dirhist_2='/home/dylan/.vim'
+let g:netrw_dirhist_3='/home/dylan/.vim/bundle'
+let g:netrw_dirhist_4='/home/dylan/.vim/bundle/vim-cpp-enhanced-highlight'
+let g:netrw_dirhist_5='/home/dylan/.vim/bundle/vim-cpp-enhanced-highlight/after'
+let g:netrw_dirhist_6='/home/dylan/.vim/bundle/vim-cpp-enhanced-highlight/after/syntax'
