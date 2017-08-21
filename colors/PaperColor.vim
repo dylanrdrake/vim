@@ -585,6 +585,7 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
   call s:HL("cIncluded", s:gray, "", "bold")
   call s:HL("cType", s:gray, "", "bold")
   call s:HL("cAnsiFunction", s:green, "", "bold")
+  call s:HL("cCustomFunc", s:green, "", "bold")
   call s:HL("cppSTLnamespace", s:gray, "", "bold")
   call s:HL("cppSTLtype", s:gray, "", "bold")
   call s:HL("cConditional", s:purple, "", "bold")
