@@ -5,6 +5,7 @@ My personal vim setup.
 ## Supported language syntax highlighting
 - Python
 - JavaScript
+- C++
 - HTML
 - Clojure
 - Go
