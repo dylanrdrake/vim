@@ -34,7 +34,7 @@ filetype on
 filetype plugin on
 filetype indent on
 """" keep parens from going to next line
-let g:paredit_electric_return=0
+"let g:paredit_electric_return=0
 
 
 
@@ -105,7 +105,7 @@ set background=dark
 
 colorscheme PaperColor
 autocmd BufNewFile,BufRead *.py colorscheme PaperColor
-autocmd BufNewFile,BufRead *.clj colorscheme molokai
+autocmd BufNewFile,BufRead *.clj colorscheme PaperColor
 autocmd BufNewFile,BufRead *.html colorscheme PaperColor
 autocmd BufNewFile,BufRead *.css colorscheme PaperColor
 autocmd BufNewFile,BufRead *.js colorscheme PaperColor

@@ -1,8 +1,10 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =6
-let g:netrw_dirhist_1='/home/dylan/code'
-let g:netrw_dirhist_2='/home/dylan/code/c++_for_programmers'
-let g:netrw_dirhist_3='/home/dylan/code/c++_for_programmers/l1'
-let g:netrw_dirhist_4='/home/dylan/code/cs102/ps1'
-let g:netrw_dirhist_5='/home/dylan/code/cs102'
-let g:netrw_dirhist_6='/home/dylan/code/cs102/notes'
+let g:netrw_dirhist_cnt =8
+let g:netrw_dirhist_1='/home/dylan/code/Clojure/todo-list/src'
+let g:netrw_dirhist_2='/home/dylan/code/Clojure/todo-list/src/todo_list'
+let g:netrw_dirhist_3='/home/dylan/school/csc102/ps1'
+let g:netrw_dirhist_4='/home/dylan/school/csc102'
+let g:netrw_dirhist_5='/home/dylan/school'
+let g:netrw_dirhist_6='/home/dylan'
+let g:netrw_dirhist_7='/home/dylan/.vim'
+let g:netrw_dirhist_8='/home/dylan/.vim/colors'

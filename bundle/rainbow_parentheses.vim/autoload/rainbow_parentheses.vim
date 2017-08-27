@@ -18,9 +18,10 @@ let s:pairs = [
 	\ ['Darkblue',    'firebrick3'],
 	\ ['darkred',     'DarkOrchid3'],
 	\ ['red',         'firebrick3'],
-    \ ['darkmagenta', 'DarkOrchid3'],
-    \ ['darkgreen',   'RoyalBlue3'], 
-    \ ['darkcyan',    'SeaGreen3'],
+        \ ['darkmagenta', 'DarkOrchid3'],
+        \ ['darkgreen',   'RoyalBlue3'], 
+        \ ['darkcyan',    'SeaGreen3'],
+        \ ['white', 'white'],
 	\ ]
 let s:pairs = exists('g:rbpt_colorpairs') ? g:rbpt_colorpairs : s:pairs
 let s:max = exists('g:rbpt_max') ? g:rbpt_max : max([len(s:pairs), 16])
