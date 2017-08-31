@@ -19,7 +19,7 @@ let s:pairs = [
 	\ ['darkred',     'DarkOrchid3'],
 	\ ['red',         'firebrick3'],
         \ ['darkmagenta', 'DarkOrchid3'],
-        \ ['darkgreen',   'RoyalBlue3'], 
+        \ ['green',       'green'], 
         \ ['darkcyan',    'SeaGreen3'],
         \ ['white', 'white'],
 	\ ]

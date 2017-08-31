@@ -581,10 +581,11 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
   call s:HL("cmakeOperators", s:red, "", "")
 
   " C and CPP highlighting
-  call s:HL("cInclude", s:foreground, "", "")
+  call s:HL("cInclude", s:wine, "", "")
   call s:HL("cIncluded", s:gray, "", "bold")
   call s:HL("cType", s:gray, "", "bold")
   call s:HL("cppType", s:gray, "", "bold")
+  call s:HL("cppBoolean", s:aqua, "", "")
   call s:HL("cAnsiFunction", s:green, "", "bold")
   call s:HL("cCustomFunc", s:green, "", "bold")
   call s:HL("cppSTLnamespace", s:gray, "", "bold")
@@ -597,6 +598,7 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
   call s:HL("cppSTLfunction", s:green, "", "")
   call s:HL("cRepeat", s:purple, "", "bold")
   call s:HL("cOperator", s:green, "", "")
+  call s:HL("cSpecial", s:wine, "", "bold")
 
   " Lex highlighting
   call s:HL("lexCFunctions", s:foreground, "", "")
@@ -1024,7 +1026,7 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
   " Clojure highlighting:
   call s:HL("clojureConstant", s:blue, "", "")
   call s:HL("clojureBoolean", s:aqua, "", "")
-  call s:HL("clojureSymbol", s:foreground, "", "bold")
+  call s:HL("clojureSymbol", s:foreground, "", "")
   call s:HL("clojureCharacter", s:olive, "", "")
   call s:HL("clojureKeyword", s:wine, "", "")
   call s:HL("clojureNumber", s:aqua, "", "")
@@ -1037,7 +1039,7 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
   call s:HL("clojureDefine", s:blue, "", "bold")
   call s:HL("clojureException", s:purple, "", "")
   call s:HL("clojureFunc", s:green, "", "bold")
-  call s:HL("clojureMacro", s:blue, "", "")
+  call s:HL("clojureMacro", s:green, "", "bold")
   call s:HL("clojureRepeat", s:blue, "", "")
   call s:HL("clojureSpecial", s:purple, "", "bold")
   call s:HL("clojureQuote", s:wine, "", "")
