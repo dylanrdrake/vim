@@ -786,21 +786,23 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
   call s:HL("javaDocParam", s:foreground, "", "")
 
   " JavaScript Highlighting
+  call s:HL("javaScriptStringS", s:olive, "", "")
   call s:HL("javaScriptBraces", s:blue, "", "")
   call s:HL("javaScriptParens", s:blue, "", "")
-  call s:HL("javaScriptIdentifier", s:pink, "", "")
+  call s:HL("javaScriptIdentifier", s:wine, "", "")
   call s:HL("javaScriptFunction", s:blue, "", "bold")
   call s:HL("javaScriptConditional", s:purple, "", "bold")
   call s:HL("javaScriptRepeat", s:purple, "", "bold")
   call s:HL("javaScriptBoolean", s:green, "", "bold")
-  call s:HL("javaScriptNumber", s:orange, "", "")
+  call s:HL("javaScriptNumber", s:aqua, "", "")
   call s:HL("javaScriptMember", s:navy, "", "")
   call s:HL("javaScriptReserved", s:navy, "", "")
   call s:HL("javascriptNull", s:comment, "", "bold")
   call s:HL("javascriptGlobal", s:foreground, "", "")
-  call s:HL("javascriptStatement", s:pink, "", "")
+  call s:HL("javascriptStatement", s:wine, "", "bold")
   call s:HL("javaScriptMessage", s:foreground, "", "")
   call s:HL("javaScriptMember", s:foreground, "", "")
+  call s:HL("javaScriptException", s:orange, "", "")
 
   " @target https://github.com/pangloss/vim-javascript
   call s:HL("jsFuncParens", s:blue, "", "")
