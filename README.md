@@ -13,8 +13,8 @@ My personal vim setup.
 
 
 ## Colorschemes
-- Molokai
 - A custom version of PaperColor modified by me
+- Molokai
 
 
 ## Plugins
